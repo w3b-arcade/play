@@ -1,0 +1,50 @@
+body,
+html {
+    height: 100%;
+}
+
+body {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+    overflow: hidden;
+}
+
+#input {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0
+}
+
+#display {
+    width: 100%;
+    height: 100%
+}
+
+.games {
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.games>div {
+    padding: 12px 15px;
+    border-radius: 10px;
+    background-color: #2352ec;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    display: flex;
+    float: left;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}

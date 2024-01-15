@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola</title>
+    <link rel="stylesheet" href="data/style.css">
+    <link rel="stylesheet" href="data/emulator.min.css">
+    <script src="data/emulator.js"></script>
+    <script src="data/loader.js"></script>
+</head>
+
+<body>
+
+    <div class="games">
+        <div data-file="mario-world.sfc" data-console="snes">Super Mario World</div>
+        <div data-file="mario-mario-all-stars.sfc" data-console="snes">Super Mario All Stars</div>
+        <div data-file="mario-kart.sfc" data-console="snes">Super Mario Kart</div>
+        <div data-file="street-fighter-2-turbo.sfc" data-console="snes">Street Fighter II Turbo</div>
+        <div data-file="street-fighter-2-alpha.smc" data-console="snes">Street Fighter II Alpha</div>
+    </div>
+
+    <div id="display" class="hidden">
+        <div id="game"></div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.games div').forEach(game => {
+            game.addEventListener('click', e => {
+                document.querySelector('.games').classList.add('hidden');
+                document.querySelector('#display').classList.remove('hidden');
+                execute({
+                    player: '#game',
+                    gameName: 'game',
+                    biosUrl: '',
+                    gameUrl: location.href + '/roms/' + game.dataset.file,
+                    core: game.dataset.console,
+                    pathtodata: 'data/',
+                    startOnLoaded: true
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
