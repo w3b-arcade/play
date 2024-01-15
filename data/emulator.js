@@ -2453,8 +2453,8 @@ class EmulatorJS {
             buttons = [
                 { id: 8, label: this.localization('A') },
                 { id: 0, label: this.localization('B') },
-                { id: 9, label: this.localization('Y') },
-                { id: 1, label: this.localization('X') },
+                { id: 9, label: this.localization('X') },
+                { id: 1, label: this.localization('Y') },
                 { id: 2, label: this.localization('SELECT') },
                 { id: 3, label: this.localization('START') },
                 { id: 4, label: this.localization('UP') },
@@ -3027,7 +3027,7 @@ class EmulatorJS {
     defaultControllers = {
         0: {
             0: {
-                'value': 'x',
+                'value': 'z',
                 'value2': 'BUTTON_2'
             },
             1: {
@@ -3059,7 +3059,7 @@ class EmulatorJS {
                 'value2': 'DPAD_RIGHT'
             },
             8: {
-                'value': 'z',
+                'value': 'x',
                 'value2': 'BUTTON_1'
             },
             9: {
