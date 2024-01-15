@@ -1080,8 +1080,8 @@ class EmulatorJS {
     initGameCore(js, wasm, thread) {
         this.initModule(wasm, thread);
         let script = this.createElement("script");
-        script.src = 'data/script.js';
-        //script.src = URL.createObjectURL(new Blob([js], { type: "application/javascript" }));
+        //script.src = 'data/script.js';
+        script.src = URL.createObjectURL(new Blob([js], { type: "application/javascript" }));
         document.body.appendChild(script);
     }
     getBaseFileName() {
